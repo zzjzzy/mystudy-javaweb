@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -39,8 +40,11 @@ public class ServletDemo implements Servlet {
 	}
 
 	@Override
-	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
+	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
 		System.out.println("servlet service方法");
+//		ServletContext context = this.getServletConfig().getServletContext();
+//		String path = context.getRealPath("/index.jsp");
+		response.getWriter().print("hello javaweb");
 		
 	}
 	
