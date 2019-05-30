@@ -8,7 +8,6 @@
     <servlet-name>hello</servlet-name>
     <url-pattern>/helloworld</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>servletDemo2</servlet-name>
     <servlet-class>com.itcast.servlet.ServletDemo2</servlet-class>
@@ -17,7 +16,6 @@
     <servlet-name>servletDemo2</servlet-name>
     <url-pattern>/servletDemo2</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>visitCount</servlet-name>
     <servlet-class>com.itcast.servlet.VisitCount</servlet-class>
@@ -26,7 +24,6 @@
     <servlet-name>visitCount</servlet-name>
     <url-pattern>/visitCount</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>responseDemo</servlet-name>
     <servlet-class>com.itcast.servlet.ResponseDemo</servlet-class>
@@ -36,5 +33,12 @@
     <url-pattern>/responseDemo</url-pattern>
   </servlet-mapping>
   
-  
+   <servlet>
+    <servlet-name>cookieServlet</servlet-name>
+    <servlet-class>com.itcast.cookieSession.CookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookieServlet</servlet-name>
+    <url-pattern>/cookieServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
