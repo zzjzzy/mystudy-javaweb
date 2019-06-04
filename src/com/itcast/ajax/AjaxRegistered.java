@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class AjaxDemo
  */
-@WebServlet("/AjaxDemo")
-public class AjaxDemo extends HttpServlet {
+@WebServlet("/AjaxRegistered")
+public class AjaxRegistered extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public AjaxDemo() {
+    public AjaxRegistered() {
         super();
     }
 
@@ -21,9 +21,13 @@ public class AjaxDemo extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		String name = request.getParameter("name");
-		System.out.println("ajax demo  "+name);
-		response.getWriter().write("ajax demo  "+name);
+		String username = request.getParameter("username");
+		System.out.println(username);
+		if (username.equals("张")) {
+			response.getWriter().write("true");
+		}else {
+			response.getWriter().write(username);
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 

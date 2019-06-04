@@ -7,6 +7,7 @@
 <head>
 <meta charset="uft-8">
 <title>Insert title here</title>
+
 </head>
 <body>
 	<div>这是index.jsp</div>

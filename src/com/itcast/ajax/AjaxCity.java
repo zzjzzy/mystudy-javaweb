@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class AjaxDemo
  */
-@WebServlet("/AjaxDemo")
-public class AjaxDemo extends HttpServlet {
+@WebServlet("/AjaxCity")
+public class AjaxCity extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public AjaxDemo() {
+    public AjaxCity() {
         super();
     }
 
@@ -21,9 +21,12 @@ public class AjaxDemo extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
-		String name = request.getParameter("name");
-		System.out.println("ajax demo  "+name);
-		response.getWriter().write("ajax demo  "+name);
+		String province = request.getParameter("province");
+		if ("山东省".equals(province)) {
+			response.getWriter().write("聊城市,济南市");
+		} else if ("北京市".equals(province)) {
+			response.getWriter().write("朝阳区,东城区,西城区");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
