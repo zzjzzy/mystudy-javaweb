@@ -15,6 +15,19 @@ public class DBUtilsDemo {
 //	Object[] str = {1,"aaa"};
 	
 	@Test
+	public void fun8() {
+		QueryRunner qr = new QueryRunner(JdbcUtils2.getDataSource());
+		String sql = "select * from customer";
+		try {
+			Map<String, Object> map = qr.query(sql, new MapHandler());
+			System.out.println(map);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	@Test
 	public void fun7() throws Exception {
 		QueryRunner qr = new QueryRunner(JdbcUtils2.getDataSource());
 		String sql = "insert into account(name, money) values(?,?)";
